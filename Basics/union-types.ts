@@ -1,6 +1,6 @@
 // Union Type - accept two different types
 
-const combine = (input1: number | string, input2: number | string) => {
+const combine2 = (input1: number | string, input2: number | string) => {
   // TS doesnt analyse what's in the union type
   // const result = input1 + input2;
 
@@ -16,8 +16,8 @@ const combine = (input1: number | string, input2: number | string) => {
   return result;
 };
 
-const combinedAges = combine(29, 53);
-const combinedStrings = combine("M34", "444");
+const combinedAges2 = combine2(29, 53);
+const combinedStrings2 = combine2("M34", "444");
 
-console.log(combinedAges);
-console.log(combinedStrings);
+console.log(combinedAges2);
+console.log(combinedStrings2);
