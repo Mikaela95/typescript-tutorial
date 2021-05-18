@@ -1,33 +1,19 @@
-// Explicit types
-/* const person: {
-  name: string;
-  age: number;
-  role: [number, string] -> This is a tuple, an array with exactly 2 elements of type number and string
-} = { */
+// Safer than using any - any is giving up and might as well be writing vanilla JS
+let userInput: unknown;
+let userName: string;
 
-// Enum - behind the scenes a number is assigned, the starting value can be changed, doenst have to be a number
-enum Role { ADMIN = 5, READ_ONLY, AUTHOR};
+userInput = 3;
+userInput = "mikaela";
 
-const person = {
-  name: 'Mikaela',
-  age: 26,
-  hobbies: ['sports', 'cooking'],
-  // role: [2, 'author'] - tuple
-  role: Role.ADMIN
+// Extra type checking when a value is of type unknown
+if (typeof userInput === "string") {
+  userName = userInput;
+}
+
+// Never type - this function never produces a return value. The inferred type is void but the new-er type never is actually being used. Good to put in, for readability
+const generateError = (message: string, code: number): never => {
+  // throw cancels the script - never produces a value hence never returns anything
+  throw { message: message, errorCode: code };
 };
 
-// push is an exception to tuples -> TS cant catch this
-// person.role.push('admin');
-
-// The following should be caught...
-//person.role[1] = 10;
-
-console.log(person.name)
-
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase())
-}
-
-if(person.role === Role.ADMIN){
-  console.log("is admin")
-}
+generateError("An error occurred!", 500);
