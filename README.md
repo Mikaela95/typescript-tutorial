@@ -1,5 +1,5 @@
 # Typescript Tutorial
-Project notes from - 'Understanding TypeScript - 2021 Edition'
+Project notes from - ['Understanding TypeScript - 2021 Edition'](https://www.udemy.com/course/understanding-typescript/)
 <br />
 Created by Maximilian Schwarzmuller
 
