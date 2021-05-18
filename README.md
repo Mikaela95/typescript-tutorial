@@ -15,8 +15,8 @@ Learning outcomes:
 <br />
 Course content:
 
-* Basic Types,
-* TypeScript Compiler,
+* Basic Types
+* TypeScript Compiler
 * Next-generation JavaScript and TypeScript
 * Classes and Interfaces
 * Advanced Types
